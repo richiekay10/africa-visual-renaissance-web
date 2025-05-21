@@ -14,56 +14,48 @@ const TestimonialsPage = () => {
       quote: "CarveStudio brought our brand to life with a stunning logo and comprehensive branding package. Their creativity and attention to detail surpassed our expectations.",
       author: "Akosua Mensah",
       position: "CEO, GoldLink Technologies",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80",
       service: "Brand Identity"
     },
     {
       quote: "The web design expertise and dedication to quality set them apart. Our site is now faster, cleaner, and much more user-friendly.",
       author: "Kofi Asante",
       position: "Marketing Manager, Jumia Ghana",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80",
       service: "Web Design"
     },
     {
       quote: "CarveStudio's graphic design team created visually appealing marketing materials that truly captured the essence of our brand. Their designs elevated our entire image.",
       author: "Esi Dapaah",
       position: "Founder, Sweet Earth Bakery",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80",
       service: "Graphic Design"
     },
     {
       quote: "Working with CarveStudio on UX/UI design was a game-changer. Our digital platforms now offer seamless and engaging experiences, thanks to their innovative designs.",
       author: "Yaw Boakye",
       position: "HR Director, SoftEdge Solutions",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80",
       service: "UX/UI Design"
     },
     {
       quote: "CarveStudio's social media management services have significantly increased our engagement. Their strategic approach and creative content resonate deeply with our audience.",
       author: "Nana Ama Serwaa",
       position: "Social Media Manager, FitLife Ghana",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80",
       service: "Social Media"
     },
     {
       quote: "The SEO services provided by CarveStudio boosted our online visibility, resulting in a noticeable increase in organic traffic. Their digital marketing expertise is commendable.",
       author: "Kwame Opoku",
       position: "CFO, EcoGreen Ghana",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80",
       service: "SEO Services"
     },
     {
       quote: "CarveStudio's event branding services added a professional touch to our forum. Their designs for logos, collateral, and signage enhanced the overall attendee experience.",
       author: "Abena Nyarko",
       position: "Event Coordinator, Accra Business Forum",
-      image: "https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&q=80",
       service: "Event Branding"
     },
     {
       quote: "CarveStudio's motion graphics brought our brand to life in the digital space. Their animated designs added a dynamic and modern flair to our campaigns.",
       author: "Kojo Boadi",
       position: "Creative Director, AfroMode Apparel",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80",
       service: "Motion Graphics"
     }
   ];
@@ -103,19 +95,9 @@ const TestimonialsPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-lg shadow-sm overflow-hidden flex flex-col md:flex-row"
+                className="bg-gray-50 rounded-lg shadow-sm overflow-hidden"
               >
-                <div className="md:w-1/3 relative">
-                  <img 
-                    src={testimonial.image}
-                    alt={testimonial.author}
-                    className="w-full h-full object-cover aspect-square"
-                  />
-                  <div className="absolute top-0 left-0 bg-primary px-3 py-1 text-sm font-medium text-secondary">
-                    {testimonial.service}
-                  </div>
-                </div>
-                <div className="p-6 md:w-2/3 flex flex-col justify-between">
+                <div className="p-6 flex flex-col justify-between h-full">
                   <div>
                     <div className="text-3xl text-primary mb-4">❝</div>
                     <p className="italic text-gray-700 mb-6">
@@ -123,6 +105,9 @@ const TestimonialsPage = () => {
                     </p>
                   </div>
                   <div>
+                    <div className="inline-block bg-primary px-3 py-1 text-sm font-medium text-secondary mb-3">
+                      {testimonial.service}
+                    </div>
                     <p className="font-semibold text-lg">{testimonial.author}</p>
                     <p className="text-gray-500">{testimonial.position}</p>
                   </div>
