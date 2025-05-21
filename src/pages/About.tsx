@@ -162,9 +162,9 @@ const AboutPage = () => {
               </div>
               <div className="text-center md:text-left">
                 <h3 className="text-2xl font-bold mb-1">Godsway Jerry Tamakloe</h3>
-                <p className="text-primary font-medium mb-4">Founder & CEO</p>
+                <p className="text-primary font-medium mb-4">Founder & Creative Manager</p>
                 <p className="text-gray-700 mb-4">
-                  As the founder and creative director of Carvestudio, Godsway brings his passion for African storytelling and visual innovation to every project. His vision drives the agency's commitment to promoting the African Renaissance through creative excellence.
+                  The visionary behind Carve Studio, brings over 8 years of experience in transforming ideas into compelling visual narratives. With a keen eye for detail and a love for storytelling, Jerry leads the team in carving out unique brand identities.
                 </p>
                 <div className="flex justify-center md:justify-start space-x-3">
                   <a 

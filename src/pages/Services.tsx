@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, PenTool, Smartphone, Layout, ShoppingBag, FileText, Image, Video, BriefcaseIcon, ChartBar, Printer, Edit } from 'lucide-react';
 
 const ServicesPage = () => {
   useEffect(() => {
@@ -12,70 +12,124 @@ const ServicesPage = () => {
 
   const services = [
     {
-      title: "Brand Identity",
+      title: "Brand Identity & Strategy",
       description: "We create distinctive brand identities that capture your essence and connect with your audience.",
       details: [
-        "Logo Design & Visual Identity",
-        "Brand Guidelines & Strategy",
-        "Brand Messaging & Positioning",
-        "Brand Applications & Collateral"
+        "Logo Design & Visual Identity Systems",
+        "Brand Guidelines & Style Documentation",
+        "Naming & Positioning",
+        "Brand Strategy & Creative Direction"
       ],
-      image: "https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?auto=format&fit=crop&q=80",
+      icon: <PenTool className="text-primary" size={36} />
     },
     {
-      title: "Digital Design",
+      title: "Packaging & Product Design",
+      description: "We develop product packaging that stands out on shelves and resonates with consumers.",
+      details: [
+        "Product Packaging & Label Design",
+        "Packaging Prototypes",
+        "Retail-Ready Design Solutions"
+      ],
+      image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80",
+      icon: <ShoppingBag className="text-primary" size={36} />
+    },
+    {
+      title: "Web Design & Development",
       description: "We craft engaging digital experiences that are both beautiful and functional.",
       details: [
-        "Website Design & Development",
-        "Mobile App UI/UX Design",
-        "Digital Product Design",
-        "Motion Graphics & Animations"
+        "Responsive Website Design",
+        "E-Commerce Development",
+        "Custom Web Applications",
+        "UX/UI Design for Web & Mobile",
+        "Wireframes, Prototypes & Usability Testing"
       ],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80",
+      icon: <Layout className="text-primary" size={36} />
     },
     {
-      title: "Creative Strategy",
-      description: "We develop strategic approaches that align your creative vision with business objectives.",
+      title: "Digital Design & Social Media",
+      description: "We create compelling digital content that engages audiences across platforms.",
       details: [
-        "Brand Positioning & Strategy",
-        "Creative Direction",
-        "Market Research & Analysis",
-        "Competitive Landscape Analysis"
+        "Social Media Graphics & Campaign Assets",
+        "Email Marketing Designs",
+        "Banner Ads & Display Graphics",
+        "Motion Graphics & Animated Content",
+        "Content Planning, Scheduling & Community Management"
       ],
-      image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80",
+      icon: <Smartphone className="text-primary" size={36} />
     },
     {
-      title: "Visual Production",
-      description: "We produce high-quality visual assets that tell your brand's story across all platforms.",
+      title: "Content Creation",
+      description: "We produce high-quality content that tells your brand's story effectively.",
       details: [
-        "Photography & Art Direction",
+        "Copywriting for Brands & Campaigns",
+        "Photography (Product, Lifestyle, Events)",
         "Video Production & Editing",
-        "Social Media Content Creation",
-        "Print & Digital Publishing"
+        "Explainer Videos & Branded Visual Stories"
       ],
-      image: "https://images.unsplash.com/photo-1596102089241-027fc2d75d7a?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1596102089241-027fc2d75d7a?auto=format&fit=crop&q=80",
+      icon: <FileText className="text-primary" size={36} />
     },
     {
-      title: "African-Inspired Design",
-      description: "We create authentic designs that celebrate African aesthetics and cultural heritage.",
+      title: "Consulting & Training",
+      description: "We share our expertise to help your team excel in creative and strategic endeavors.",
       details: [
-        "Cultural Pattern Design",
-        "African Typography & Illustration",
-        "Contemporary African Art Direction",
-        "Cultural Storytelling & Narratives"
+        "Brand & Digital Strategy Consulting",
+        "UX/UI Design Training",
+        "Design Thinking & Creative Workshops",
+        "Visual Merchandising Strategy"
       ],
-      image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80",
+      icon: <BriefcaseIcon className="text-primary" size={36} />
     },
     {
-      title: "Marketing & Promotion",
-      description: "We develop marketing materials that amplify your message and drive engagement.",
+      title: "Marketing & SEO",
+      description: "We develop effective strategies to increase your brand's visibility and reach.",
       details: [
-        "Campaign Development & Execution",
-        "Promotional Materials & Design",
-        "Social Media Strategy",
-        "Digital Marketing Assets"
+        "Digital Marketing Strategy",
+        "Search Engine Optimization (On-Page & Off-Page)",
+        "Keyword Research & SEO Audits",
+        "Analytics, Reporting & Performance Tracking"
       ],
-      image: "https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&q=80",
+      icon: <ChartBar className="text-primary" size={36} />
+    },
+    {
+      title: "Print & Production",
+      description: "We create high-quality print materials that represent your brand with excellence.",
+      details: [
+        "Brochures, Flyers, Posters & Editorial Layouts",
+        "Annual Reports & Corporate Publications",
+        "Print Production Management & Quality Control",
+        "Environmental Graphics & Space Branding"
+      ],
+      image: "https://images.unsplash.com/photo-1594022158478-af3e99d94c6b?auto=format&fit=crop&q=80",
+      icon: <Printer className="text-primary" size={36} />
+    },
+    {
+      title: "Event Branding & Experience",
+      description: "We create cohesive visual systems that make your events memorable.",
+      details: [
+        "Event Logo & Visual Identity",
+        "Event Collateral & Signage Design",
+        "Branded Merchandise & Promotional Materials",
+        "Wayfinding Systems & Booth Design"
+      ],
+      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80",
+      icon: <Edit className="text-primary" size={36} />
+    },
+    {
+      title: "Illustration & Custom Art",
+      description: "We create unique illustrations and custom artwork that bring your ideas to life.",
+      details: [
+        "Editorial & Conceptual Illustrations",
+        "Infographics & Data Visuals",
+        "Hand-drawn & Vector Artworks"
+      ],
+      image: "https://images.unsplash.com/photo-1618331835717-801e976710b2?auto=format&fit=crop&q=80",
+      icon: <Image className="text-primary" size={36} />
     }
   ];
 
@@ -113,9 +167,9 @@ const ServicesPage = () => {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
-            <h2 className="heading-lg mb-6">How We Can Help You</h2>
+            <h2 className="heading-lg mb-6">Our Creative Services at Carvestudio</h2>
             <p className="text-gray-700 text-lg">
-              At Carvestudio, we offer a wide range of creative services designed to help your brand stand out in a crowded marketplace. Our approach combines strategic thinking with creative excellence, ensuring that every project we undertake not only looks stunning but also delivers meaningful results.
+              We offer a wide range of tailored creative services that bring your brand to life — whether you're a startup, a growing business, or an established enterprise. At Carvestudio, every service is delivered with a creative edge and strategic intent.
             </p>
           </motion.div>
 
@@ -132,7 +186,10 @@ const ServicesPage = () => {
                 }`}
               >
                 <div className={index % 2 !== 0 ? 'lg:order-2' : ''}>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4">{service.title}</h3>
+                  <div className="flex items-center mb-4">
+                    <div className="mr-4">{service.icon}</div>
+                    <h3 className="text-2xl md:text-3xl font-bold">{service.title}</h3>
+                  </div>
                   <p className="text-gray-700 text-lg mb-6">
                     {service.description}
                   </p>
