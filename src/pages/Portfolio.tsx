@@ -72,6 +72,13 @@ const PortfolioPage = () => {
       category: "digital",
       image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80",
       description: "UI/UX design for a mobile banking application focused on accessibility."
+    },
+    {
+      id: 10,
+      title: "Sustainable Fashion Lookbook",
+      category: "photography",
+      image: "https://images.unsplash.com/photo-1580974582391-a6649c82a85f?auto=format&fit=crop&q=80",
+      description: "Photography and layout design for an eco-friendly fashion brand."
     }
   ];
   

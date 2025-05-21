@@ -69,7 +69,7 @@ const ServicesPage = () => {
         "Video Production & Editing",
         "Explainer Videos & Branded Visual Stories"
       ],
-      image: "https://images.unsplash.com/photo-1596102089241-027fc2d75d7a?auto=format&fit=crop&q=80",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80",
       icon: <FileText className="text-primary" size={36} />
     },
     {

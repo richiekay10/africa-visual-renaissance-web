@@ -1,8 +1,7 @@
-
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Briefcase, Users, Award, BookOpen, Heart, Clock, Coffee, Mail } from 'lucide-react';
+import { Briefcase, Users, Award, BookOpen, Heart, Clock, Coffee, Mail, Smartphone, Gamepad } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -18,7 +17,9 @@ const CareersPage = () => {
     { title: 'Web Development', icon: BookOpen },
     { title: 'Digital Marketing', icon: Award },
     { title: 'Project Management', icon: Clock },
-    { title: 'Content Creation', icon: Coffee }
+    { title: 'Content Creation', icon: Coffee },
+    { title: 'Mobile App Development', icon: Smartphone },
+    { title: 'Game Development', icon: Gamepad }
   ];
 
   const benefits = [

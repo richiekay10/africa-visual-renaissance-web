@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -135,8 +134,8 @@ const HomePage = () => {
               className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden"
             >
               <img 
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89f0be?auto=format&fit=crop&q=80"
-                alt="Creative team working"
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80"
+                alt="Creative team collaborating"
                 className="w-full h-full object-cover"
               />
             </motion.div>
@@ -177,52 +176,6 @@ const HomePage = () => {
               className="inline-flex items-center bg-primary hover:bg-primary/90 text-secondary px-6 py-3 rounded font-medium transition-colors"
             >
               All Services <ArrowRight size={16} className="ml-2" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio Preview */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="heading-lg mb-4">Featured Work</h2>
-            <p className="text-gray-600">
-              Take a look at some of our recent projects showcasing our creative expertise.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative aspect-square overflow-hidden rounded-lg"
-              >
-                <img 
-                  src={`https://source.unsplash.com/random/600x600?african,design,art&sig=${index}`}
-                  alt={`Portfolio item ${item}`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-white text-xl font-semibold">Project Name {item}</h3>
-                    <p className="text-gray-200">Branding &amp; Design</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <Link
-              to="/portfolio"
-              className="inline-flex items-center border-2 border-secondary hover:bg-secondary hover:text-white text-secondary px-6 py-3 rounded font-medium transition-colors"
-            >
-              View All Projects <ArrowRight size={16} className="ml-2" />
             </Link>
           </div>
         </div>
