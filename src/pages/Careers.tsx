@@ -25,7 +25,7 @@ const CareersPage = () => {
     { title: 'Competitive Compensation', description: 'Fair, market-aligned salaries based on skill and impact.' },
     { title: 'Health & Wellness', description: 'Access to wellness initiatives to promote work-life balance.' },
     { title: 'Growth Opportunities', description: 'Trainings, workshops, and mentorship to fuel your development.' },
-    { title: 'Inclusive Culture', description: 'Diversity is more than a value—it's how we thrive.' },
+    { title: 'Inclusive Culture', description: 'Diversity is more than a value—it\'s how we thrive.' },
     { title: 'Flexible Work', description: 'Options for hybrid schedules and remote work when possible.' },
     { title: 'Team Bonding', description: 'Regular creative hangouts, team lunches, and retreats.' },
     { title: 'Inspiring Workspace', description: 'Modern tools, beautiful workspaces, and a positive atmosphere.' }
@@ -33,12 +33,12 @@ const CareersPage = () => {
 
   const values = [
     { title: 'Creativity', description: 'We champion original ideas and out-of-the-box thinking.' },
-    { title: 'Collaboration', description: 'We build together—everyone's input matters.' },
+    { title: 'Collaboration', description: 'We build together—everyone\'s input matters.' },
     { title: 'Quality', description: 'Excellence is our standard in every task.' },
     { title: 'Integrity', description: 'We operate with honesty, trust, and transparency.' },
     { title: 'Continuous Learning', description: 'We evolve with the industry and invest in learning.' },
     { title: 'Inclusivity', description: 'Every voice is heard. Every person is valued.' },
-    { title: 'Client-Centricity', description: 'Our clients' goals shape our direction.' }
+    { title: 'Client-Centricity', description: 'Our clients\' goals shape our direction.' }
   ];
 
   const applicationSteps = [
