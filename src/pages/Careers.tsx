@@ -18,7 +18,7 @@ const CareersPage = () => {
     { title: 'Web Development', icon: BookOpen },
     { title: 'Digital Marketing', icon: Award },
     { title: 'Project Management', icon: Clock },
-    { title: 'Content Creation', icon: Coffee },
+    { title: 'Content Creation', icon: Coffee }
   ];
 
   const benefits = [
@@ -28,7 +28,7 @@ const CareersPage = () => {
     { title: 'Inclusive Culture', description: 'Diversity is more than a value—it's how we thrive.' },
     { title: 'Flexible Work', description: 'Options for hybrid schedules and remote work when possible.' },
     { title: 'Team Bonding', description: 'Regular creative hangouts, team lunches, and retreats.' },
-    { title: 'Inspiring Workspace', description: 'Modern tools, beautiful workspaces, and a positive atmosphere.' },
+    { title: 'Inspiring Workspace', description: 'Modern tools, beautiful workspaces, and a positive atmosphere.' }
   ];
 
   const values = [
@@ -38,7 +38,7 @@ const CareersPage = () => {
     { title: 'Integrity', description: 'We operate with honesty, trust, and transparency.' },
     { title: 'Continuous Learning', description: 'We evolve with the industry and invest in learning.' },
     { title: 'Inclusivity', description: 'Every voice is heard. Every person is valued.' },
-    { title: 'Client-Centricity', description: 'Our clients' goals shape our direction.' },
+    { title: 'Client-Centricity', description: 'Our clients' goals shape our direction.' }
   ];
 
   const applicationSteps = [
