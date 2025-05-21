@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -196,19 +195,19 @@ const PortfolioPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                quote: "Carvestudio transformed our brand with a unique visual identity that perfectly captures our African heritage while positioning us as a modern global company.",
-                author: "Sarah Johnson",
-                position: "Marketing Director, Adansi Global"
+                quote: "CarveStudio brought our brand to life with a stunning logo and comprehensive branding package. Their creativity and attention to detail surpassed our expectations.",
+                author: "Akosua Mensah",
+                position: "CEO, GoldLink Technologies"
               },
               {
-                quote: "The team's understanding of both traditional African aesthetics and contemporary design trends resulted in a website that has significantly increased our engagement.",
-                author: "Kofi Mensah",
-                position: "CEO, TechVillage Accra"
+                quote: "The web design expertise and dedication to quality set them apart. Our site is now faster, cleaner, and much more user-friendly.",
+                author: "Kofi Asante",
+                position: "Marketing Manager, Jumia Ghana"
               },
               {
-                quote: "Working with Carvestudio was a seamless experience. They took the time to understand our vision and delivered beyond our expectations.",
-                author: "Amara Okafor",
-                position: "Founder, Akwaaba Hospitality"
+                quote: "CarveStudio's graphic design team created visually appealing marketing materials that truly captured the essence of our brand. Their designs elevated our entire image.",
+                author: "Esi Dapaah",
+                position: "Founder, Sweet Earth Bakery"
               }
             ].map((testimonial, index) => (
               <motion.div
