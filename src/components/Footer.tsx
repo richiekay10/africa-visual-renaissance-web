@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin, Twitter } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin, Twitter, Youtube } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -92,6 +92,14 @@ const Footer = () => {
                 className="bg-white/10 hover:bg-primary hover:text-secondary transition-colors p-2 rounded-full"
               >
                 <Twitter size={20} />
+              </a>
+              <a 
+                href="https://www.youtube.com/@carvestudioo" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white/10 hover:bg-primary hover:text-secondary transition-colors p-2 rounded-full"
+              >
+                <Youtube size={20} />
               </a>
             </div>
           </div>

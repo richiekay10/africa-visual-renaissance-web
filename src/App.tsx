@@ -25,8 +25,8 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <TooltipProvider>
         <Toaster />
         <Sonner />
         <Navbar />
@@ -45,8 +45,8 @@ const App = () => (
         </main>
         <WhatsAppButton />
         <Footer />
-      </BrowserRouter>
-    </TooltipProvider>
+      </TooltipProvider>
+    </BrowserRouter>
   </QueryClientProvider>
 );
 
