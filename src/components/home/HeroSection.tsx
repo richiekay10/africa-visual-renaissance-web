@@ -56,10 +56,10 @@ const HeroSection = () => {
               Our Services
             </Link>
             <Link 
-              to="/portfolio" 
+              to="/testimonials" 
               className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded font-medium transition-colors"
             >
-              View Our Work
+              Client Testimonials
             </Link>
           </motion.div>
         </motion.div>
