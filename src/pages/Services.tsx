@@ -105,7 +105,7 @@ const ServicesPage = () => {
         "Print Production Management & Quality Control",
         "Environmental Graphics & Space Branding"
       ],
-      image: "https://images.unsplash.com/photo-1594022158478-af3e99d94c6b?auto=format&fit=crop&q=80",
+      image: "https://images.unsplash.com/photo-1594022158478-af3e99d94c6b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
       icon: <Printer className="text-primary" size={36} />
     },
     {

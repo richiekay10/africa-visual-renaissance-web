@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Briefcase, Users, Award, BookOpen, Clock, Coffee, Smartphone, Gamepad } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 
 const JobOpenings = () => {
   const jobCategories = [
@@ -54,8 +55,8 @@ const JobOpenings = () => {
         </div>
 
         <div className="text-center">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-black">
-            Explore Current Opportunities
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-black" asChild>
+            <Link to="/contact">Explore Current Opportunities</Link>
           </Button>
         </div>
       </div>
