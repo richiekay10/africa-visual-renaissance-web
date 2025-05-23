@@ -1,5 +1,6 @@
 
-import { PenTool, Smartphone, Layout, ShoppingBag, FileText, Image, Video, BriefcaseIcon, ChartBar, Printer, Edit } from 'lucide-react';
+import { PenTool, Smartphone, Layout, ShoppingBag, FileText, Image, BriefcaseIcon, ChartBar, Printer, Edit } from 'lucide-react';
+import { LucideIcon } from 'lucide-react';
 
 export interface ServiceItem {
   title: string;
@@ -7,8 +8,28 @@ export interface ServiceItem {
   details: string[];
   image?: string;
   textOnly?: boolean;
-  icon: JSX.Element;
+  iconName: string;
 }
+
+// This function will create the icon element when used in a React component
+export const getServiceIcon = (iconName: string, size = 36): JSX.Element => {
+  const icons: Record<string, LucideIcon> = {
+    PenTool,
+    Smartphone,
+    Layout,
+    ShoppingBag,
+    FileText,
+    Image,
+    BriefcaseIcon,
+    ChartBar,
+    Printer,
+    Edit
+  };
+  
+  const IconComponent = icons[iconName];
+  // We'll handle this in the component that uses this file
+  return IconComponent ? <IconComponent size={size} className="text-primary" /> : <></>;
+};
 
 export const services: ServiceItem[] = [
   {
@@ -21,7 +42,7 @@ export const services: ServiceItem[] = [
       "Brand Strategy & Creative Direction"
     ],
     image: "https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?auto=format&fit=crop&q=80",
-    icon: <PenTool className="text-primary" size={36} />
+    iconName: "PenTool"
   },
   {
     title: "Packaging & Product Design",
@@ -32,7 +53,7 @@ export const services: ServiceItem[] = [
       "Retail-Ready Design Solutions"
     ],
     image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80",
-    icon: <ShoppingBag className="text-primary" size={36} />
+    iconName: "ShoppingBag"
   },
   {
     title: "Web Design & Development",
@@ -45,7 +66,7 @@ export const services: ServiceItem[] = [
       "Wireframes, Prototypes & Usability Testing"
     ],
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80",
-    icon: <Layout className="text-primary" size={36} />
+    iconName: "Layout"
   },
   {
     title: "Digital Design & Social Media",
@@ -58,7 +79,7 @@ export const services: ServiceItem[] = [
       "Content Planning, Scheduling & Community Management"
     ],
     image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80",
-    icon: <Smartphone className="text-primary" size={36} />
+    iconName: "Smartphone"
   },
   {
     title: "Content Creation",
@@ -70,7 +91,7 @@ export const services: ServiceItem[] = [
       "Explainer Videos & Branded Visual Stories"
     ],
     image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80",
-    icon: <FileText className="text-primary" size={36} />
+    iconName: "FileText"
   },
   {
     title: "Consulting & Training",
@@ -82,7 +103,7 @@ export const services: ServiceItem[] = [
       "Visual Merchandising Strategy"
     ],
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80",
-    icon: <BriefcaseIcon className="text-primary" size={36} />
+    iconName: "BriefcaseIcon"
   },
   {
     title: "Marketing & SEO",
@@ -94,7 +115,7 @@ export const services: ServiceItem[] = [
       "Analytics, Reporting & Performance Tracking"
     ],
     image: "https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&q=80",
-    icon: <ChartBar className="text-primary" size={36} />
+    iconName: "ChartBar"
   },
   {
     title: "Print & Production",
@@ -106,7 +127,7 @@ export const services: ServiceItem[] = [
       "Environmental Graphics & Space Branding"
     ],
     textOnly: true,
-    icon: <Printer className="text-primary" size={36} />
+    iconName: "Printer"
   },
   {
     title: "Event Branding & Experience",
@@ -118,7 +139,7 @@ export const services: ServiceItem[] = [
       "Wayfinding Systems & Booth Design"
     ],
     image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80",
-    icon: <Edit className="text-primary" size={36} />
+    iconName: "Edit"
   },
   {
     title: "Illustration & Custom Art",
@@ -129,6 +150,6 @@ export const services: ServiceItem[] = [
       "Hand-drawn & Vector Artworks"
     ],
     image: "https://images.unsplash.com/photo-1618331835717-801e976710b2?auto=format&fit=crop&q=80",
-    icon: <Image className="text-primary" size={36} />
+    iconName: "Image"
   }
 ];

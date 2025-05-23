@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { ServiceItem, services } from './serviceData';
+import { ServiceItem, services, getServiceIcon } from './serviceData';
 
 const ServicesList = () => {
   return (
@@ -25,7 +25,7 @@ const ServiceCard = ({ service, index }: { service: ServiceItem; index: number }
     >
       <div className={index % 2 !== 0 && !service.textOnly ? 'lg:order-2' : ''}>
         <div className="flex items-center mb-4">
-          <div className="mr-4">{service.icon}</div>
+          <div className="mr-4">{getServiceIcon(service.iconName)}</div>
           <h3 className="text-2xl md:text-3xl font-bold">{service.title}</h3>
         </div>
         <p className="text-gray-700 text-lg mb-6">
