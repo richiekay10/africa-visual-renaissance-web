@@ -1,6 +1,5 @@
-
-import { PenTool, Smartphone, Layout, ShoppingBag, FileText, Image, BriefcaseIcon, ChartBar, Printer, Edit } from 'lucide-react';
 import { LucideIcon } from 'lucide-react';
+import { PenTool, Smartphone, Layout, ShoppingBag, FileText, Image, BriefcaseIcon, ChartBar, Printer, Edit } from 'lucide-react';
 
 export interface ServiceItem {
   title: string;
@@ -12,7 +11,7 @@ export interface ServiceItem {
 }
 
 // This function will create the icon element when used in a React component
-export const getServiceIcon = (iconName: string, size = 36): JSX.Element => {
+export const getServiceIcon = (iconName: string): LucideIcon | null => {
   const icons: Record<string, LucideIcon> = {
     PenTool,
     Smartphone,
@@ -26,9 +25,7 @@ export const getServiceIcon = (iconName: string, size = 36): JSX.Element => {
     Edit
   };
   
-  const IconComponent = icons[iconName];
-  // We'll handle this in the component that uses this file
-  return IconComponent ? <IconComponent size={size} className="text-primary" /> : <></>;
+  return icons[iconName] || null;
 };
 
 export const services: ServiceItem[] = [

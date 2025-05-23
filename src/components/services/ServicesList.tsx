@@ -13,6 +13,12 @@ const ServicesList = () => {
 };
 
 const ServiceCard = ({ service, index }: { service: ServiceItem; index: number }) => {
+  // Render the icon component
+  const renderIcon = (iconName: string) => {
+    const IconComponent = getServiceIcon(iconName);
+    return IconComponent ? <IconComponent size={36} className="text-primary" /> : null;
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -25,7 +31,7 @@ const ServiceCard = ({ service, index }: { service: ServiceItem; index: number }
     >
       <div className={index % 2 !== 0 && !service.textOnly ? 'lg:order-2' : ''}>
         <div className="flex items-center mb-4">
-          <div className="mr-4">{getServiceIcon(service.iconName)}</div>
+          <div className="mr-4">{renderIcon(service.iconName)}</div>
           <h3 className="text-2xl md:text-3xl font-bold">{service.title}</h3>
         </div>
         <p className="text-gray-700 text-lg mb-6">
