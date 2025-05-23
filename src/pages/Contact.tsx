@@ -101,7 +101,7 @@ const ContactPage = () => {
                   </div>
                 </div>
                 
-                {/* Recruitment Team - NEW */}
+                {/* Recruitment Team - UPDATED with email link */}
                 <div className="flex items-start">
                   <div className="bg-primary p-3 rounded-lg mr-4">
                     <Users className="text-secondary" size={24} />
@@ -109,7 +109,13 @@ const ContactPage = () => {
                   <div>
                     <h3 className="text-xl font-semibold mb-1">Recruitment Team</h3>
                     <p className="text-gray-700 mb-2">
-                      Looking to join our team? Contact our recruitment specialists.
+                      Looking to join our team? Contact our recruitment specialists at{" "}
+                      <a 
+                        href="mailto:carvestudio10@gmail.com?subject=Recruitment%20Inquiry" 
+                        className="text-primary hover:underline"
+                      >
+                        carvestudio10@gmail.com
+                      </a>
                     </p>
                     <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-secondary">
                       <Link to="/careers">View Open Positions</Link>
