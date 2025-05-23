@@ -105,7 +105,7 @@ const ServicesPage = () => {
         "Print Production Management & Quality Control",
         "Environmental Graphics & Space Branding"
       ],
-      image: "https://images.unsplash.com/photo-1594022158478-af3e99d94c6b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+      textOnly: true, // Add this flag to identify text-only services
       icon: <Printer className="text-primary" size={36} />
     },
     {
@@ -181,11 +181,11 @@ const ServicesPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 !== 0 ? 'lg:flex-row-reverse' : ''
+                className={`grid grid-cols-1 ${service.textOnly ? '' : 'lg:grid-cols-2'} gap-12 items-center ${
+                  index % 2 !== 0 && !service.textOnly ? 'lg:flex-row-reverse' : ''
                 }`}
               >
-                <div className={index % 2 !== 0 ? 'lg:order-2' : ''}>
+                <div className={index % 2 !== 0 && !service.textOnly ? 'lg:order-2' : ''}>
                   <div className="flex items-center mb-4">
                     <div className="mr-4">{service.icon}</div>
                     <h3 className="text-2xl md:text-3xl font-bold">{service.title}</h3>
@@ -203,18 +203,20 @@ const ServicesPage = () => {
                   </ul>
                 </div>
                 
-                <div className={`relative ${index % 2 !== 0 ? 'lg:order-1' : ''}`}>
-                  <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-lg">
-                    <img 
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-full object-cover"
-                    />
+                {!service.textOnly && (
+                  <div className={`relative ${index % 2 !== 0 ? 'lg:order-1' : ''}`}>
+                    <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+                      <img 
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="absolute -bottom-6 right-6 bg-primary p-2 rounded w-24 h-24 flex items-center justify-center rotate-3">
+                      <span className="text-4xl text-secondary font-bold">✦</span>
+                    </div>
                   </div>
-                  <div className="absolute -bottom-6 right-6 bg-primary p-2 rounded w-24 h-24 flex items-center justify-center rotate-3">
-                    <span className="text-4xl text-secondary font-bold">✦</span>
-                  </div>
-                </div>
+                )}
               </motion.div>
             ))}
           </div>

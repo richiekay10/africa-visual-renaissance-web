@@ -1,7 +1,8 @@
-
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin, Twitter } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin, Twitter, Users } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const ContactPage = () => {
   useEffect(() => {
@@ -97,6 +98,22 @@ const ContactPage = () => {
                     >
                       Accra, Ghana
                     </a>
+                  </div>
+                </div>
+                
+                {/* Recruitment Team - NEW */}
+                <div className="flex items-start">
+                  <div className="bg-primary p-3 rounded-lg mr-4">
+                    <Users className="text-secondary" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-1">Recruitment Team</h3>
+                    <p className="text-gray-700 mb-2">
+                      Looking to join our team? Contact our recruitment specialists.
+                    </p>
+                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-secondary">
+                      <Link to="/careers">View Open Positions</Link>
+                    </Button>
                   </div>
                 </div>
               </div>
